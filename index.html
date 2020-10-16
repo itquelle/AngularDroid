@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+
+    <!--
+        @copyright ItQuelle.de
+    -->
+
+    <base href="/" />
+
+    <meta charset="UTF-8">
+    <title>MyApp</title>
+
+    <script src="java/app/node_modules/angular/angular.min.js"></script>
+    <script src="java/app/node_modules/angular-route/angular-route.min.js"></script>
+    <script src="java/app/node_modules/jquery/dist/jquery.min.js"></script>
+
+    <script src="java/controller/index.js"></script>
+    <script src="java/manifests/JSManifest.js"></script>
+
+    <script src="java/app/AppController.js"></script>
+    <script src="java/app/MainActivity.js"></script>
+
+    <link rel="stylesheet" href="res/styles/style.css?v=11" media="screen">
+
+</head>
+<body>
+
+    <header>
+        <ul>
+            <li><a href="home">Home</a></li>
+            <li><a href="test">Test JSON Request</a></li>
+            <li><a href="sym/bitcoin">Bitcoin</a></li>
+            <li><a href="profile/bilal">Array List</a></li>
+            <li><a href="user/stevie">User Profile</a></li>
+        </ul>
+    </header>
+    <section ng-view class="ContentPlaceholder"></section>
+
+</body>
+</html>

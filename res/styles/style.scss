@@ -1,0 +1,178 @@
+@import 'colors';
+@import 'font';
+@import 'functions';
+
+body{
+  margin: 0;
+}
+
+// Test
+a{
+  color: #304FFE;
+  &:visited{ color: #304FFE; }
+  &:hover{ color: #304FFE; }
+}
+.PageTitle{
+  float:left;
+  width: 100%;
+  padding: 20px 0;
+  font:{
+    size: 20px;
+    weight: 600;
+  }
+}
+table{
+  &.TestTable{
+    width:100%;
+    position: relative;
+    border-collapse: collapse;
+    thead{
+      tr{
+        td{
+          background: #fff;
+          position: sticky;
+          top: 0;
+          padding: 15px;
+          font:{
+            weight: 500;
+          }
+        }
+      }
+    }
+    tbody{
+      tr{
+        td{
+          span{
+            float:left;
+            &:nth-child(2){
+              padding:{
+                left: 10px;
+              }
+            }
+          }
+          img{
+            width: 20px;
+            height: 20px;
+            object-fit: cover;
+          }
+          border-top: 1px solid #f2f2f2;
+          padding: 15px;
+        }
+      }
+    }
+  }
+}
+
+section{
+  &.ContentPlaceholder{
+    float:left;
+    width: 100%;
+    padding: 50px;
+  }
+}
+
+header{
+  float:left;
+  width: 100%;
+  background: #f2f2f2;
+  ul{
+    margin: 0;
+    padding: 0;
+    li{
+      &:hover{
+        cursor: pointer;
+        color: #304FFE;
+      }
+      float:left;
+      padding: 15px 20px;
+      list-style: none;
+      font:{
+        weight: 500;
+      }
+    }
+  }
+}
+
+// Tools
+@-webkit-keyframes placeHolderShimmer {
+  0% {
+    background-position: -468px 0
+  }
+  100% {
+    background-position: 468px 0
+  }
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -468px 0
+  }
+  100% {
+    background-position: 468px 0
+  }
+}
+
+.Profile__Photo{
+  float:left;
+  width: 100px;
+  height: 100px;
+  background: #ccc;
+}
+
+.TextView{
+  display: inline-block;
+  color: transparent;
+  user-select: none !important;
+  &.View{
+    user-select: auto !important;
+    color: #000;
+  }
+}
+
+.Animate {
+  @include border-radius(6px);
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: placeHolderShimmer;
+  animation-name: placeHolderShimmer;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  background: #f6f7f8;
+  background: #eeeeee;
+  background: -webkit-gradient(linear, left top, right top, color-stop(8%, #eeeeee), color-stop(18%, #dddddd), color-stop(33%, #eeeeee));
+  background: -webkit-linear-gradient(left, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+  background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+  -webkit-background-size: 800px 104px;
+  background-size: 800px 104px;
+  position: relative;
+}
+
+table{
+  &.BilalTable{
+    width: 100%;
+    position: relative;
+    border-collapse: collapse;
+    tbody{
+      tr{
+        td{
+          padding: 10px;
+        }
+      }
+    }
+    thead{
+      tr{
+        td{
+          position: sticky;
+          top: 0;
+          color: #304FFE;
+          padding: 10px;
+          background: #fff;
+        }
+      }
+    }
+  }
+}

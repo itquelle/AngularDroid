@@ -1,0 +1,19 @@
+<div style="float:left; width: 100%;">
+    <div style="float:left;">
+        <div class="Profile__Photo Animate"></div>
+    </div>
+    <div style="float:left; padding-left: 10px">
+        <div class="TextView Animate">Hallo {{ profile_id }}</div>
+        <br><br>
+        <div class="TextView Animate">Hallo {{ profile_id }} wie gehts dir</div><br>
+        <div class="TextView Animate" style="margin-top: 5px">Ja Super</div>
+    </div>
+</div>
+
+<div ng-controller="ProfileListenerController">
+    <ul>
+        <li ng-repeat="value in list">
+            {{ value }}
+        </li>
+    </ul>
+</div>

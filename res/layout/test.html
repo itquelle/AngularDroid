@@ -1,0 +1,30 @@
+<div class="PageTitle">
+    {{ PageTitle }}
+</div>
+<table class="TestTable">
+    <thead>
+    <tr>
+        <td>#</td>
+        <td>Name</td>
+        <td align="right">Market Cap</td>
+        <td align="right">Price</td>
+        <td align="right">Volume (24h)</td>
+        <td align="right">Circulating Supply</td>
+        <td align="right">Change</td>
+    </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="value in cryptoListener">
+            <td>{{ value.position }}</td>
+            <td>
+                <span><img src="{{ value.icon }}"></span>
+                <span><a href="{{ value.url }}" target="_blank">{{ value.name }}</a></span>
+            </td>
+            <td align="right">{{ value.mktcap }} €</td>
+            <td align="right">{{ value.price }} €</td>
+            <td align="right">{{ value.volume }} €</td>
+            <td align="right">{{ value.supply }} {{ value.symbol }}</td>
+            <td align="right">{{ value.change }}%</td>
+        </tr>
+    </tbody>
+</table>

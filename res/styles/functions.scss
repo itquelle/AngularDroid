@@ -1,0 +1,17 @@
+@mixin border-radius($pixel){
+  -webkit-border-radius:$pixel;
+  -moz-border-radius:$pixel;
+  border-radius:$pixel;
+}
+
+@mixin textTruncate(){
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@mixin box-shadow($options){
+  -webkit-box-shadow: $options;
+  -moz-box-shadow: $options;
+  box-shadow: $options;
+}
